@@ -52,6 +52,7 @@ app.use(session({
 app.use(cors(
     {
     credentials: true,
+    origin: "*",
     // methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"]
 }
     // corsConfig
@@ -70,7 +71,7 @@ app.use(LabsRoute)
 app.use(NewsRoute)
 app.use(FasilitasRoute)
 
-store.sync()
+// store.sync()
 
 app.listen(process.env.APP_PORT, () => {
     console.log("server up and running..")
