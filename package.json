@@ -7,10 +7,14 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "keywords": [
+    
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@now/node": "^1.8.5",
+    "@vercel/node": "^3.0.25",
     "argon2": "^0.31.2",
     "connect-session-sequelize": "^7.1.7",
     "cors": "^2.8.5",

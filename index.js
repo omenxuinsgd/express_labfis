@@ -17,6 +17,12 @@ dotenv.config()
 
 const app = express()
 
+// const corsConfig = {
+//     credentials: true,
+//     origin: "http://localhost:3000",
+//     methods: ["GET", "POST", "PUT", "PATCH", "DELETE"]
+// }
+
 const sessionStore = SequelizeStore(session.Store)
 
 const store = new sessionStore({
@@ -24,14 +30,14 @@ const store = new sessionStore({
 })
 
 // Sinkronisasi database
-// ;(async () => {
-//     try {
-//       await db.sync();
-//       console.log('Database synchronized');
-//     } catch (error) {
-//       console.error('Error synchronizing database:', error);
-//     }
-//   })();
+;(async () => {
+    try {
+      await db.sync();
+      console.log('Database synchronized');
+    } catch (error) {
+      console.error('Error synchronizing database:', error);
+    }
+  })();
 
 app.use(session({
     secret: process.env.SESS_SECRET,
@@ -43,10 +49,16 @@ app.use(session({
     }
 }))
 
-app.use(cors({
+app.use(cors(
+    {
     credentials: true,
-    origin: process.env.REACT_APP_API_URL
-}))
+    origin: process.env.REACT_APP_API_URL,
+    // methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"]
+}
+    // corsConfig
+))
+
+// app.options("", corsConfig)
 
 app.use(express.json())
 app.use(fileUpload());
