@@ -3,12 +3,12 @@ POST https://tiny-teal-moose-vest.cyclic.app/users
 Content-Type: application/json
 
 {
-    "name": "Pa Mada",
-    "email": "pamada@fisikaku.ac.id",
+    "name": "Omen",
+    "email": "omen@fisikaku.ac.id",
     "nim": "123456789",
     "password": "fisika123",
     "confPassword": "fisika123",
-    "role": "admin"
+    "role": "user"
 }
 
 ###
@@ -38,7 +38,7 @@ DELETE http://localhost:5000/users/1940a8f8-98ea-42dd-b2e0-ea891cbdc755
 
 ###
 // Login a user
-POST http://localhost:5000/login
+POST https://tiny-teal-moose-vest.cyclic.app/login
 Content-Type: application/json
 
 {
