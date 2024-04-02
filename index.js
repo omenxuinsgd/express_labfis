@@ -52,7 +52,7 @@ app.use(session({
 app.use(cors(
     {
     credentials: true,
-    origin: "*",
+    origin: "http://localhost:3000",
     // methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"]
 }
     // corsConfig
