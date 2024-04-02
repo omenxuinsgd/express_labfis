@@ -52,7 +52,7 @@ app.use(session({
 app.use(cors(
     {
     credentials: true,
-    origin: process.env.REACT_APP_API_URL,
+    origin: "*",
     // methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"]
 }
     // corsConfig
