@@ -51,8 +51,8 @@ app.use(session({
 
 app.use(cors(
     {
-    credentials: false,
-    origin: ["http://localhost:3000"],
+    credentials: true,
+    origin: ["http://localhost:3000", "*"],
     // optionSuccessStatus:200, 
     // methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"]
 }
