@@ -52,7 +52,7 @@ app.use(session({
 app.use(cors(
     {
     credentials: true,
-    origin: ["http://localhost:3000", "*"],
+    origin: process.env.REACT_APP_API_URL,
     // optionSuccessStatus:200, 
     // methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"]
 }

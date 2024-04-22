@@ -1,5 +1,5 @@
 // Create a user
-POST https://tiny-teal-moose-vest.cyclic.app/users
+POST http://expresslabvercell-production.up.railway.app/users
 Content-Type: application/json
 
 {
@@ -13,7 +13,7 @@ Content-Type: application/json
 
 ###
 // get All users
-GET https://tiny-teal-moose-vest.cyclic.app/users
+GET https://expresslabvercell-production.up.railway.app/users
 
 
 ###
@@ -43,7 +43,7 @@ DELETE http://localhost:5000/users/1940a8f8-98ea-42dd-b2e0-ea891cbdc755
 
 ###
 // Login a user
-POST https://tiny-teal-moose-vest.cyclic.app/login
+POST https://8bb2-125-164-20-3.ngrok-free.app/login
 Content-Type: application/json
 
 {
